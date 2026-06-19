@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Himani Reddy · Senior BI Analyst & Power BI Developer</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0f1a;
+  --surface:#0f1624;
+  --card:#151e2e;
+  --card2:#1a2438;
+  --accent:#00c2ff;
+  --accent2:#7b61ff;
+  --accent3:#00e5a0;
+  --border:rgba(255,255,255,0.08);
+  --txt:#e8edf5;
+  --txt2:#8a9ab5;
+  --txt3:#4a5a72;
+}
+body{background:var(--ink);color:var(--txt);font-family:'Inter','Segoe UI',sans-serif;line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.port{max-width:900px;margin:0 auto;padding:0 0 60px}
+
+/* HERO */
+.hero{background:var(--surface);border-bottom:1px solid var(--border);padding:48px 40px 40px;position:relative;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,255,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+.hero-glow{position:absolute;top:-80px;right:-60px;width:360px;height:360px;background:rgba(0,194,255,0.06);border-radius:50%;pointer-events:none}
+.hero-glow2{position:absolute;bottom:-100px;left:20px;width:240px;height:240px;background:rgba(123,97,255,0.05);border-radius:50%;pointer-events:none}
+.hero-inner{position:relative;z-index:1}
+.status-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,160,0.1);border:1px solid rgba(0,229,160,0.3);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:600;color:#00e5a0;margin-bottom:20px;letter-spacing:0.03em}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#00e5a0}
+.hero-top{display:flex;align-items:flex-start;gap:22px;margin-bottom:22px}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--card2);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:600;color:var(--accent);flex-shrink:0}
+.hero-name{font-size:32px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:6px}
+.hero-title{font-size:14px;color:var(--accent);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:16px}
+.hero-loc,.hero-exp{font-size:13px;color:var(--txt2);display:flex;align-items:center;gap:6px}
+.dot-sep{color:var(--txt3)}
+.certs-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.cert{display:inline-flex;align-items:center;gap:7px;background:rgba(0,194,255,0.08);border:1px solid rgba(0,194,255,0.2);border-radius:7px;padding:6px 12px;font-size:12px;font-weight:600;color:#6dd6f5}
+.cert.anthropic{background:rgba(123,97,255,0.12);border:1px solid rgba(123,97,255,0.35);color:#c4b8ff}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px 16px;text-align:center}
+.stat-n{font-size:28px;font-weight:700;color:var(--accent);line-height:1}
+.stat-l{font-size:11px;color:var(--txt2);margin-top:4px;text-transform:uppercase;letter-spacing:0.07em}
+
+/* SECTIONS */
+.section{padding:32px 40px 0}
+.section-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.eyebrow-line{flex:1;height:1px;background:var(--border)}
+.eyebrow-txt{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--txt3);white-space:nowrap}
+
+/* EXPERIENCE */
+.exp-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;margin-bottom:14px;border-left:3px solid var(--accent)}
+.exp-card.purple{border-left-color:var(--accent2)}
+.exp-card.green{border-left-color:var(--accent3)}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:10px}
+.exp-role{font-size:16px;font-weight:700;color:#fff}
+.exp-company{font-size:13px;color:var(--accent);margin-top:2px}
+.exp-company.purple{color:#b5a8ff}
+.exp-company.green{color:#5effd1}
+.exp-date{font-size:12px;color:var(--txt3);white-space:nowrap;padding-top:4px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:6px;padding:4px 10px}
+.exp-bullets{list-style:none;margin-top:12px}
+.exp-bullets li{font-size:13px;color:var(--txt2);padding:4px 0 4px 18px;position:relative;line-height:1.55}
+.exp-bullets li::before{content:'›';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:16px;line-height:1.3}
+.exp-card.purple .exp-bullets li::before{color:#b5a8ff}
+.exp-card.green .exp-bullets li::before{color:#5effd1}
+.exp-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.pill{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:999px;padding:3px 11px;font-size:11px;color:var(--txt2)}
+.pill.hi{background:rgba(0,194,255,0.1);border-color:rgba(0,194,255,0.2);color:#6dd6f5}
+.pill.pu{background:rgba(123,97,255,0.1);border-color:rgba(123,97,255,0.2);color:#b5a8ff}
+.pill.gr{background:rgba(0,229,160,0.08);border-color:rgba(0,229,160,0.2);color:#5effd1}
+
+/* AI BAND */
+.ai-band{background:var(--card2);border:1px solid rgba(123,97,255,0.25);border-radius:12px;padding:22px 24px}
+.ai-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.ai-icon{width:44px;height:44px;border-radius:10px;background:rgba(123,97,255,0.15);border:1px solid rgba(123,97,255,0.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;color:#b5a8ff}
+.ai-title{font-size:16px;font-weight:700;color:#fff}
+.ai-sub{font-size:12px;color:var(--txt2);margin-top:2px}
+.ai-chips{display:flex;flex-wrap:wrap;gap:8px}
+.ai-chip{display:inline-flex;align-items:center;gap:6px;background:rgba(123,97,255,0.1);border:1px solid rgba(123,97,255,0.2);border-radius:999px;padding:6px 14px;font-size:12px;color:#b5a8ff;font-weight:600}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill-block{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+.skill-block-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.skill-icon-wrap{width:36px;height:36px;border-radius:8px;background:rgba(0,194,255,0.1);border:1px solid rgba(0,194,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;color:var(--accent)}
+.skill-icon-wrap.pu{background:rgba(123,97,255,0.1);border-color:rgba(123,97,255,0.2);color:#b5a8ff}
+.skill-icon-wrap.gr{background:rgba(0,229,160,0.08);border-color:rgba(0,229,160,0.2);color:#5effd1}
+.skill-block-title{font-size:14px;font-weight:700;color:#fff}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px}
+.stag{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:5px;padding:3px 9px;font-size:11px;color:var(--txt2)}
+
+/* EDUCATION */
+.edu-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.edu-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px}
+.edu-deg{font-size:14px;font-weight:700;color:#fff;margin-bottom:5px}
+.edu-school{font-size:13px;color:var(--accent);margin-bottom:3px}
+.edu-year{font-size:12px;color:var(--txt3)}
+
+/* CONTACT */
+.contact-bar{background:var(--surface);border-top:1px solid var(--border);padding:24px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:32px}
+.contact-items{display:flex;flex-wrap:wrap;gap:20px}
+.contact-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--txt2)}
+
+@media(max-width:600px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .skills-grid{grid-template-columns:1fr 1fr}
+  .edu-row{grid-template-columns:1fr}
+  .hero{padding:32px 20px 28px}
+  .section{padding:24px 20px 0}
+  .contact-bar{padding:20px}
+}
+</style>
+</head>
+<body>
+<div class="port">
+
+  <div class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow2"></div>
+    <div class="hero-inner">
+      <div class="status-pill"><div class="status-dot"></div>Open to Opportunities · Dallas, TX</div>
+      <div class="hero-top">
+        <div class="avatar">HR</div>
+        <div>
+          <div class="hero-name">Himani Reddy</div>
+          <div class="hero-title">Senior BI Analyst &amp; Power BI Developer</div>
+          <div class="hero-meta">
+            <span class="hero-loc">📍 Dallas, TX</span>
+            <span class="dot-sep">·</span>
+            <span class="hero-exp">7+ Years Experience</span>
+            <span class="dot-sep">·</span>
+            <a href="mailto:himanireddy1310@gmail.com">himanireddy1310@gmail.com</a>
+            <span class="dot-sep">·</span>
+            <a href="https://www.linkedin.com/in/himanireddylakkyreddy/" target="_blank">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="certs-row">
+        <div class="cert">🏅 PL-300 · Power BI Data Analyst Associate</div>
+        <div class="cert">🏅 DP-600 · Fabric Analytics Engineer</div>
+        <div class="cert">🏅 PL-900 · Power Platform Fundamentals</div>
+        <div class="cert anthropic">🤖 Anthropic · AI Fluency: Framework &amp; Foundations</div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-n">7+</div><div class="stat-l">Years Exp.</div></div>
+        <div class="stat"><div class="stat-n">80+</div><div class="stat-l">Reports Built</div></div>
+        <div class="stat"><div class="stat-n">4</div><div class="stat-l">Certifications</div></div>
+        <div class="stat"><div class="stat-n">3</div><div class="stat-l">Industries</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-txt">Professional Summary</div><div class="eyebrow-line"></div></div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px 24px;font-size:14px;color:var(--txt2);line-height:1.75">
+      Senior Business Intelligence Analyst and Power BI Developer with 7+ years delivering scalable, insight-driven analytics solutions across enterprise environments. Holds four certifications — three Microsoft (PL-300, DP-600, PL-900) and Anthropic's AI Fluency: Framework &amp; Foundations — with deep expertise across the full Microsoft data stack including advanced DAX, data modeling, Microsoft Fabric Lakehouse architecture, AI-augmented development, and production BI governance. Proven ability to translate complex business requirements into actionable dashboards, automate workflows with AI agents, and lead end-to-end analytics delivery across sales, finance, and HR domains.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-txt">Experience</div><div class="eyebrow-line"></div></div>
+
+    <div class="exp-card">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Business Insights Analyst II</div>
+          <div class="exp-company">Swire Coca-Cola · Salt Lake City, UT</div>
+        </div>
+        <div class="exp-date">Aug 2022 – Present</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Delivered 80+ end-to-end Power BI reports for sales, finance &amp; HR with top-line KPI visibility frameworks</li>
+        <li>Architected Microsoft Fabric Lakehouse Delta solutions with DirectLake/SQL endpoints and medallion architecture</li>
+        <li>Built AI agents and workflow automation using GitHub Copilot and Claude within the Microsoft Platform</li>
+        <li>Developed Snowflake data quality &amp; reconciliation frameworks using advanced SQL (CTEs, window functions)</li>
+        <li>Implemented RLS, OLS &amp; Azure AD group-based access controls in collaboration with security teams</li>
+        <li>Designed Canvas &amp; Model-driven Power Apps with Power Automate flows for pipeline orchestration</li>
+        <li>Led end-to-end project delivery stepping into product owner and project manager roles with UAT sign-offs</li>
+      </ul>
+      <div class="exp-pills">
+        <span class="pill hi">Power BI</span><span class="pill hi">Microsoft Fabric</span><span class="pill hi">Snowflake</span><span class="pill hi">DAX</span><span class="pill pu">AI Agents</span><span class="pill pu">GitHub Copilot</span><span class="pill">Power Apps</span><span class="pill">Power Automate</span><span class="pill">RLS/OLS</span><span class="pill">Agile/Jira</span>
+      </div>
+    </div>
+
+    <div class="exp-card purple">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Business Analyst Intern</div>
+          <div class="exp-company purple">Breeze Airways · Salt Lake City, UT</div>
+        </div>
+        <div class="exp-date">Apr 2022 – Jul 2022</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Automated ETL pipelines with Azure Data Factory, reducing manual operations by 70%</li>
+        <li>Built real-time Power BI dashboards cutting reporting latency by 40%</li>
+        <li>Generated API-based automation saving 100+ manager hours/week on safety &amp; risk reporting</li>
+        <li>Applied Azure DevOps CI/CD practices for ADF pipeline and SQL object deployment</li>
+      </ul>
+      <div class="exp-pills">
+        <span class="pill pu">Azure Data Factory</span><span class="pill pu">Azure DevOps</span><span class="pill hi">Power BI</span><span class="pill">CI/CD</span><span class="pill">REST APIs</span><span class="pill">SQL</span>
+      </div>
+    </div>
+
+    <div class="exp-card green">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">Business Intelligence Engineer</div>
+          <div class="exp-company green">L&amp;T Infotech · India</div>
+        </div>
+        <div class="exp-date">May 2018 – Dec 2021</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Built 8 Power BI dashboards with DAX measures, calculated columns &amp; RLS across enterprise projects</li>
+        <li>Performed ETL/EDA and data modeling on 8M+ records for maintenance analytics</li>
+        <li>Implemented REST API ingestion pipelines via Power Query M functions for SaaS data integration</li>
+        <li>Worked across Power Platform, SharePoint Framework (SPFX), React JS, and .NET Core</li>
+      </ul>
+      <div class="exp-pills">
+        <span class="pill gr">Power BI</span><span class="pill gr">SharePoint/SPFX</span><span class="pill">React JS</span><span class="pill">.NET Core</span><span class="pill">Power Query M</span><span class="pill">SQL</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:28px">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-txt">AI &amp; Intelligent Automation</div><div class="eyebrow-line"></div></div>
+    <div class="ai-band">
+      <div class="ai-head">
+        <div class="ai-icon">🧠</div>
+        <div>
+          <div class="ai-title">AI-augmented development &amp; automation</div>
+          <div class="ai-sub">Hands-on AI tooling within the Microsoft ecosystem and beyond</div>
+        </div>
+      </div>
+      <div class="ai-chips">
+        <div class="ai-chip">⚡ Power BI Copilot</div>
+        <div class="ai-chip">🤖 GitHub Copilot</div>
+        <div class="ai-chip">💬 Claude (Anthropic)</div>
+        <div class="ai-chip">🎓 AI Fluency: Framework &amp; Foundations</div>
+        <div class="ai-chip">✏️ Prompt Engineering</div>
+        <div class="ai-chip">🕸️ AI Agent Building</div>
+        <div class="ai-chip">📖 Smart Narratives</div>
+        <div class="ai-chip">🔍 Q&amp;A / NLQ Visuals</div>
+        <div class="ai-chip">📉 Anomaly Detection</div>
+        <div class="ai-chip">⚙️ Workflow Automation</div>
+        <div class="ai-chip">🛡️ Purview Governance</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:28px">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-txt">Skills &amp; Technologies</div><div class="eyebrow-line"></div></div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <div class="skill-icon-wrap">📊</div>
+          <div class="skill-block-title">Power BI &amp; Platform</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Desktop &amp; Service</span><span class="stag">DAX &amp; M</span><span class="stag">Tabular Editor</span><span class="stag">DAX Studio</span><span class="stag">VertiPaq Analyzer</span><span class="stag">Paginated Reports</span><span class="stag">RLS / OLS</span><span class="stag">Deployment Pipelines</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <div class="skill-icon-wrap pu">☁️</div>
+          <div class="skill-block-title">Azure &amp; Fabric</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Microsoft Fabric</span><span class="stag">Lakehouse/OneLake</span><span class="stag">Synapse Analytics</span><span class="stag">Azure Data Factory</span><span class="stag">Data Lake Gen2</span><span class="stag">Medallion Architecture</span><span class="stag">DirectLake</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <div class="skill-icon-wrap gr">🗄️</div>
+          <div class="skill-block-title">SQL &amp; Databases</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Snowflake</span><span class="stag">MS SQL Server</span><span class="stag">PostgreSQL</span><span class="stag">MySQL</span><span class="stag">Oracle 11g</span><span class="stag">CTEs</span><span class="stag">Window Functions</span><span class="stag">Query Optimization</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <div class="skill-icon-wrap">🔧</div>
+          <div class="skill-block-title">Power Platform</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Power Apps (Canvas)</span><span class="stag">Power Apps (Model)</span><span class="stag">Power Automate</span><span class="stag">Power Query</span><span class="stag">Virtual Agents</span><span class="stag">Portals</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <div class="skill-icon-wrap pu">💻</div>
+          <div class="skill-block-title">Programming</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Python</span><span class="stag">R</span><span class="stag">JavaScript</span><span class="stag">React JS</span><span class="stag">C / C++</span><span class="stag">PowerShell</span><span class="stag">.NET Core</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-block-head">
+          <div class="skill-icon-wrap gr">📈</div>
+          <div class="skill-block-title">Other BI Tools</div>
+        </div>
+        <div class="skill-tags">
+          <span class="stag">Tableau</span><span class="stag">Alteryx</span><span class="stag">Google Analytics</span><span class="stag">Domo</span><span class="stag">Talend</span><span class="stag">SSIS</span><span class="stag">Apache Spark</span><span class="stag">Smartsheet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:28px">
+    <div class="section-eyebrow"><div class="eyebrow-line"></div><div class="eyebrow-txt">Education</div><div class="eyebrow-line"></div></div>
+    <div class="edu-row">
+      <div class="edu-card">
+        <div class="edu-deg">M.S. Information Systems</div>
+        <div class="edu-school">University of Utah · Salt Lake City, UT</div>
+        <div class="edu-year">Business Analytics Track · Jan 2022 – Dec 2022</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-deg">B.Tech</div>
+        <div class="edu-school">Osmania University · Hyderabad, India</div>
+        <div class="edu-year">Jan 2014 – May 2018</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-bar">
+    <div class="contact-items">
+      <div class="contact-item">📞 <span>(385) 401-9890</span></div>
+      <div class="contact-item">✉️ <a href="mailto:himanireddy1310@gmail.com">himanireddy1310@gmail.com</a></div>
+      <div class="contact-item">🔗 <a href="https://www.linkedin.com/in/himanireddylakkyreddy/" target="_blank">LinkedIn Profile</a></div>
+      <div class="contact-item">📍 <span>Dallas, TX</span></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
